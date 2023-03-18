@@ -15,15 +15,27 @@ font-size: 18px;
 background-color: white;
 }
 
+.navbar .storename{
+  color: #7B3F00;
+  padding: 3px 10px;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-transform: uppercase;
+margin-top: -30px;
+margin-left: -30px;
+font-weight: bold;
+  }
+
 .navlist{
  list-style-type: none;
  position: relative;
-left: 0px;
+ margin-left: -80px;
 }
 
 .navlist .listitem{
 display: inline-block;
 padding: 30px 30px;
+opacity: 1;
 }
 
 .footer{
@@ -109,6 +121,9 @@ padding: 0 0px;
     color: #7B3F00;
 }
 
+.shoppingmenu {
+margin-top: -20px;
+  }
 
 .shoppingmenu:hover {
 transform: rotate(-25deg);
@@ -475,3 +490,63 @@ body {
         background-color: grey;
         border: 0 none;
       }
+
+      /* Responsive Navigation */
+
+
+  .icon-burger {
+position: absolute;
+right: 10%;
+top: 11%;
+transform: translateY(-50%);
+display: none;
+      }
+
+      .icon-burger .line {
+        width: 30px;
+        height: 5px;
+        background-color: #7B3F00;
+        margin: 5px;
+        border-radius: 3px;
+      }
+
+      @media screen and (max-width: 1100px) {
+        .icon-burger {
+          position: absolute;
+          right: 85%;
+          top: 5%;
+          transform: translateY(-50%);
+          display:block;
+        }
+    
+    
+        .navlist {
+          position: fixed;
+          float: none;
+          z-index: 9;
+          left: 0;
+          right: 0;
+          top: 80px;
+          bottom: -100;
+          background-color:#7B3F00;
+          width: auto;
+          overflow: hidden;
+          transition: all .5s ease-in-out;
+        }
+
+        .navlist a{
+          display: flex;
+          color: white;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-content: center;
+          justify-content: center;
+          align-items: center;
+      }
+  
+    
+        .icon-burger{
+          display: block;
+        }
+      }
+      
